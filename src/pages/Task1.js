@@ -1,13 +1,16 @@
 /* eslint-disable no-unused-vars */
 import React, {useState} from 'react';
 
+const Colors = ["Red", "Blue", "Yellow"]; 
 
-function createColorManager() {
-   <colorManager />
+createColorManager(Colors[0]);
+
+function createColorManager(color) {
+   <ColorManager />
 }
 
-function colorManager(){
-  const Colors = ["Red", "Blue", "Yellow"]; 
+function ColorManager(){
+  
   let number = 1;
 
   const get = () => {
@@ -18,25 +21,27 @@ function colorManager(){
      return Colors[number-1];
   }
 
-  const prev = () =>{
+  const prev = () => {
      return Colors[number+1];
   }
   
   const reset = () =>{
+     console.log("bing chilling");
      return Colors[0];
   }
-}
 
+}
 
 function Question1() 
 {
 
+  const Color = new ColorManager();
   return(
     <div>
        <button>Next</button>
        <button>Prev</button>
        <button>Get</button>
-       <button>Reset</button>
+       <button onClick={ColorManager}>Reset</button>
     </div>
   ); 
 }

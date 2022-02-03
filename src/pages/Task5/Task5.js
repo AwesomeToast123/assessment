@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 
+
+
+
 class Task5 extends Component{
+   
    
    constructor(props){
       super(props);
       this.state={
          products:[],
-         show: function(){
-            <h1>Hello</h1>
-         }
+         show: false
       }
    }
 
@@ -25,44 +27,45 @@ class Task5 extends Component{
    }
    
    sidePanel(){
-      return(
-         <div>
-            {
-            this.state.products.map((item, key) =>{
-                  return(
-                     <div>
-                     <table className="table">
-                      <thead>
-                        <tr>
-                          <th>Category</th>
-                          <th>Price</th>
-                          <th>Manufacturer</th>
-                          <th>Production Date</th>               
-                      </tr>
-                     </thead>
-                     <tbody>
-
-                     <tr>
-                        <th>{item.Category}</th>
-                        <th>{item.Price}</th>
-                        <th>{item.Manufacturer}</th>
-                        <th>{item.ProductionDate }</th>
-                     </tr>
-                     </tbody>
-                     </table>
-                     </div>
-                  ) 
-               }) 
-           }
-         </div>
-      )
+      this.setState({
+         show:true
+      });   
    }
 
+
+   Table = () => {
+         this.state.show && this.state.products.map((item, key) => {
+            return(
+               <div>
+               <table className="table">
+                <thead>
+                  <tr>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Manufacturer</th>
+                    <th>Production Date</th>               
+                </tr>
+               </thead>
+               <tbody>
+               <tr>
+                  <th>{item.Category}</th>
+                  <th>{item.Price}</th>
+                  <th>{item.Manufacturer}</th>
+                  <th>{item.ProductionDate }</th>
+               </tr>
+               </tbody>
+               </table>
+               </div>
+            ) 
+         }) 
+   }
+   
    render(){
       return(
           <div>
             <button onClick={this.sidePanel}>Options</button>
-          </div>
+            {this.Table}
+          </div>  
       )
    }
 };

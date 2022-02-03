@@ -18,10 +18,16 @@ function Task2(a, b, c)
 
       Task2(this.remember, this.remember2, c);
   }
-
-  return(
-    <div><h1>{sum}</h1></div>
-  );
 }
 
-export default Task2;
+function Solved()
+{
+   let num = Task2(1, 2, 3);
+   return(
+      <div>
+        <h1>{num}</h1>
+      </div>
+    );
+}
+
+export default Solved;

@@ -7,7 +7,7 @@ const bem = {
    modifier: "",
    build: this.block + this.element + this.modifier
 }
-*/
+
 
 
 
@@ -56,3 +56,4 @@ Task4.block().element().modifier().build();
 
 
 export default Task4;
+*/
