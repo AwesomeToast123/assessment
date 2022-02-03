@@ -5,12 +5,10 @@ import Task3 from './pages/Task3';
 import Task5 from './pages/Task5/Task5';
 
 function App() {
-    return ( <
-        div >
-        <
-        Task5 / >
-        <
-        /div>
+    return ( 
+      <div>
+        <Task5 />
+      </div>
     );
 }
 

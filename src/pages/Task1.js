@@ -6,7 +6,6 @@ function createColorManager() {
    <colorManager />
 }
 
-
 function colorManager(){
   const Colors = ["Red", "Blue", "Yellow"]; 
   let number = 1;
@@ -28,15 +27,16 @@ function colorManager(){
   }
 }
 
+
 function Question1() 
 {
 
   return(
     <div>
-       <button onClick={this.next}>Next</button>
-       <button onClick={this.prev}>Prev</button>
-       <button onClick={this.get}>get</button>
-       <button onClick={this.reset}>reset</button>
+       <button>Next</button>
+       <button>Prev</button>
+       <button>Get</button>
+       <button>Reset</button>
     </div>
   ); 
 }
