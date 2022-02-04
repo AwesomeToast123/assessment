@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import './Task5Style.css';
 
-
-class Task5 extends Component{
-
+class Task5 extends Component
+{   
    constructor(props){
       super(props);
       this.state={
@@ -21,48 +21,27 @@ class Task5 extends Component{
     });
     this.setState({ products });
    }
-   
+
    sidePanel(){
-      this.setState({
-         show:true
-      });  
-
-   }
-
    
-   Table() {
-         this.state.products.map((item, key) => {
-            return(
-               <div>
-               <table className="table">
-                <thead>
-                  <tr>
-                    <th>Category</th>
-                    <th>Price</th>
-                    <th>Manufacturer</th>
-                    <th>Production Date</th>               
-                </tr>
-               </thead>
-               <tbody>
-               <tr>
-                  <th>{item.Category}</th>
-                  <th>{item.Price}</th>
-                  <th>{item.Manufacturer}</th>
-                  <th>{item.ProductionDate }</th>
-               </tr>
-               </tbody>
-               </table>
-               </div>
-            ) 
-         }) 
    }
    
-   render(){
-      const Row = () =>{
+   render() {         
+      const Row = () => {
         return(
          this.state.products.map((item, key) => {
             return(
                <div>
+                  <div>
+                     Total Quantity: {}
+                </div>
+                <div>
+                  Total cost: {}
+                </div>
+                <div>
+                  Average Price: {}
+                </div>
+                
                <table className="table">
                 <thead>
                   <tr>
@@ -77,7 +56,7 @@ class Task5 extends Component{
                   <th>{item.Category}</th>
                   <th>{item.Price}</th>
                   <th>{item.Manufacturer}</th>
-                  <th>{item.ProductionDate }</th>
+                  <th>{item.ProductionDate}</th>
                </tr>
                </tbody>
                </table>
@@ -86,14 +65,16 @@ class Task5 extends Component{
          }) 
         )
       }
+      
       return(
           <div>
-            <button onClick={this.sidePanel}>Options</button>
+            <button onClick= {this.sidePanel }>Options</button>
              <Row />
-          </div>  
+          </div> 
       )
    }
 };
+
 
 
 export default Task5;

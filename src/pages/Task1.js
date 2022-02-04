@@ -26,10 +26,8 @@ function ColorManager(){
   }
   
   const reset = () =>{
-     console.log("bing chilling");
      return Colors[0];
   }
-
 }
 
 function Question1() 

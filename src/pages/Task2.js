@@ -11,7 +11,7 @@ function Task2(a, b, c)
       sum = a + b + c;
       return sum;
   }
-  
+    
   if(Task2.length < 3){
       this.remember = a;
       this.remember2 = b;

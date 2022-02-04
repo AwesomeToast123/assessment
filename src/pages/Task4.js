@@ -35,7 +35,9 @@ class Task4 extends Component{
   };
   
   render() {
-   return <div></div>
+   // eslint-disable-next-line no-undef
+   const bem = new block("Hello").element("There").modifier("Lol").build();
+   return <div>{bem}</div>
   } 
    
 }
