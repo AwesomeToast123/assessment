@@ -23,7 +23,19 @@ class Task5 extends Component
    }
 
    sidePanel(){
-   
+      <div>
+         <div>
+          <h2>Filter By:</h2>
+          <input type="checkbox" name="Category" value="Category"/>
+          <input type="checkbox" name="Price" value="Price"/>
+          <input type="checkbox" name="Manufacturer" value="Manufacturer"/>
+         </div>
+      
+         <div>
+          <button>Apply</button>
+          <button>Reset</button>
+         </div>
+      </div>
    }
    
    render() {         
