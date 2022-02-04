@@ -4,8 +4,7 @@ import React, { Component } from 'react';
 
 
 class Task5 extends Component{
-   
-   
+
    constructor(props){
       super(props);
       this.state={
@@ -13,7 +12,7 @@ class Task5 extends Component{
          show: false
       }
    }
-
+   
    componentDidMount()
    {    
     const  { products } = this.state;
@@ -31,10 +30,9 @@ class Task5 extends Component{
          show:true
       });   
    }
-
-
-   Table = () => {
-         this.state.show && this.state.products.map((item, key) => {
+   
+   Table() {
+         this.state.products.map((item, key) => {
             return(
                <div>
                <table className="table">
@@ -64,7 +62,7 @@ class Task5 extends Component{
       return(
           <div>
             <button onClick={this.sidePanel}>Options</button>
-            {this.Table}
+
           </div>  
       )
    }
